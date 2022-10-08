@@ -1,0 +1,117 @@
+*,
+*:before,
+*:after{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151320;
+}
+
+h3{
+    font-size: 32px;
+    letter-spacing: 1px;
+    position: relative;
+    right: 10px;
+    top: 25px;
+}
+
+.container {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #1c1b29;
+}
+
+.container:before {
+    content: '';
+    background-image: 
+    conic-gradient(
+        #8757d4 20deg,
+        transparent 120deg,
+        #04b0ee 240deg,
+        transparent 320deg
+    );
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    animation: rotate 2s infinite linear;
+    z-index: 5;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.container:after {
+    content: '';
+    height: 98%;
+    width: 98%;
+    position: absolute;
+    background-color: #1c1b29;
+    border-radius: 5px;
+    top: 1%;
+    left: 1%;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.container-content {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    margin: auto;
+    padding: 15px;
+    top: 0;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    color: #04b0ee;
+    display: grid;
+    place-items: center;
+    z-index: 20;
+}
+
+.submitBtn {
+    border-color: #04b0ee;
+    background-color: transparent;
+    color: #04b0ee;
+    text-shadow: 2xp 2px 2px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+}
+
+.submitBtn:hover {
+    box-shadow: 5px 2px 20px;
+}
+
+input {
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    color: #04b0ee;
+    font-size: 1em;
+}
